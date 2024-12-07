@@ -163,8 +163,10 @@ button {
 }
 
 .mobile-menu-button {
+  display: flex;
   border: none;
   background-color: transparent;
+  margin-left: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -198,13 +200,13 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-link :active {
+.menu-link:active {
   color: #404bbf;
 }
 
 @media only screen and (min-width: 1158px) {
-  .menu-list:hover,
-  .menu-list:focus {
+  .menu-list :hover,
+  .menu-list :focus {
     color: #404bbf;
   }
 }
@@ -246,6 +248,7 @@ button {
 
 @media only screen and (min-width: 768px) {
   .contacts-link {
+    display: block;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -294,7 +297,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/Hero/people-office_mob@1x.jpg);
+    url(../images/hero/people-office_mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -311,7 +314,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/Hero/people-office_mob@2x.jpg);
+      url(../images/hero/people-office_mob@2x.jpg);
   }
 }
 
@@ -323,7 +326,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/Hero/people-office_tab@1x.jpg);
+      url(../images/hero/people-office_tab@1x.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -334,7 +337,7 @@ button {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/Hero/people-office_tab@2x.jpg);
+        url(../images/hero/people-office_tab@2x.jpg);
     }
   }
 }
@@ -347,7 +350,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/Hero/people-office_desk@1x.jpg);
+      url(../images/hero/people-office_desk@1x.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -358,7 +361,7 @@ button {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/Hero/people-office_desk@2x.jpg);
+        url(../images/hero/people-office_desk@2x.jpg);
     }
   }
 }
@@ -749,7 +752,7 @@ button {
   top: 0;
   left: 0;
 
-  transform: translateY(100%);
+  transform: translateY(101%);
 
   transition-property: transform;
   transition-duration: 250ms;
@@ -928,8 +931,10 @@ button {
   height: 100%;
 }
 
-.link-icon:active {
-  background-color: #31d0aa;
+@media only screen and (min-width: 320px) and (max-width: 1157px) {
+  .link-icon:active {
+    background-color: #31d0aa;
+  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -942,14 +947,14 @@ button {
 
 /* Footer input */
 
-.footer-subcribe-form {
+.footer-subscribe-form {
   display: flex;
   gap: 16px;
   flex-direction: column;
 }
 
 @media only screen and (min-width: 768px) {
-  .footer-subcribe-form {
+  .footer-subscribe-form {
     flex-direction: row;
     gap: 16px 24px;
   }
@@ -999,6 +1004,21 @@ input {
   }
 }
 
+  input:active {
+    border-color: #31d0aa;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+  }
+
+@media only screen and (min-width: 1158px) {
+  input:hover,
+  input:focus {
+    border-color: #31d0aa;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+}
+
 input::placeholder {
   color: #fff;
   opacity: 0.6;
@@ -1030,6 +1050,19 @@ input::placeholder {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+}
+
+.footer-input-button:active {
+  background-color: #31d0aa;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-input-button:hover,
+  .footer-input-button:focus {
+    background-color: #31d0aa;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .footer-button-icon {
